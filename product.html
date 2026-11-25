@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สินค้าทั้งหมด | บาหมี่</title>
+  <meta name="description" content="เลือกบะหมี่บาหมี่ตามอารมณ์ ทั้งแบบซองและแบบถ้วย ซดคล่อง นัวละมุน จัดจ้าน และฟิวชัน">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">บาหมี่</a>
+      <nav aria-label="เมนูหลัก">
+        <ul class="nav">
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="product.html" aria-current="page">สินค้า</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h1 class="title-rule" style="font-size: var(--text-xl);">สินค้าทั้งหมด</h1>
+          <p class="lead">เลือกดูตามอารมณ์ของวันนี้ได้เลย</p>
+        </div>
+
+        <div id="filter-bar" class="filters" role="group" aria-label="กรองสินค้าตามอารมณ์"></div>
+        <div id="product-list" class="grid grid--3" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span>© 2026 บาหมี่</span>
+      <span>บะหมี่กึ่งสำเร็จรูปที่เข้าใจทุกอารมณ์ของคุณ</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>บาหมี่ | บะหมี่กึ่งสำเร็จรูปที่เข้าใจทุกอารมณ์ของคุณ</title>
+  <meta name="description" content="บาหมี่ บะหมี่กึ่งสำเร็จรูปที่เข้าใจทุกอารมณ์ของคุณ อร่อยครบทุก Mood ในทุกช่วงเวลา">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* เฉพาะหน้าแรก */
+    .hero {
+      display: flex;
+      align-items: center;
+      min-height: calc(100vh - 72px);
+      min-height: calc(100svh - 72px);
+      padding-block: var(--space-5);
+    }
+
+    .hero h1 {
+      max-width: 22em;
+      margin-bottom: var(--space-4);
+      font-size: clamp(2rem, 1.2rem + 3vw, 3.5rem);
+      line-height: 1.4;
+    }
+
+    .hero h1 span {
+      display: block;
+    }
+
+    .mood-card {
+      display: flex;
+      flex-direction: column;
+      padding: var(--space-3);
+      color: var(--ink);
+      text-decoration: none;
+      background: var(--cream-50);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      transition: border-color 0.25s var(--ease);
+    }
+
+    .mood-card:hover {
+      color: var(--ink);
+      border-color: var(--line-strong);
+    }
+
+    .mood-card h3 {
+      margin: 0;
+    }
+
+    .mood-card__en {
+      margin-bottom: var(--space-2);
+      font-size: var(--text-sm);
+      color: var(--ink-faint);
+    }
+
+    .mood-card__desc {
+      flex: 1;
+      font-size: var(--text-sm);
+    }
+
+    .mood-card__cta {
+      margin-top: var(--space-2);
+      padding-top: var(--space-2);
+      font-size: var(--text-sm);
+      color: var(--brown);
+      border-top: 1px solid var(--line);
+    }
+
+    .mood-card:hover .mood-card__cta {
+      text-decoration: underline;
+      text-decoration-color: var(--mood, var(--gold));
+      text-underline-offset: 0.35em;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">บาหมี่</a>
+      <nav aria-label="เมนูหลัก">
+        <ul class="nav">
+          <li><a href="index.html" aria-current="page">หน้าแรก</a></li>
+          <li><a href="product.html">สินค้า</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>
+          <span>บาหมี่ — บะหมี่กึ่งสำเร็จรูปที่เข้าใจทุกอารมณ์ของคุณ</span>
+          <span>อร่อยครบทุก Mood ในทุกช่วงเวลา</span>
+        </h1>
+        <a class="btn" href="product.html">ดูสินค้าทั้งหมด</a>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="moods">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="title-rule">เลือกตามอารมณ์ของวันนี้</h2>
+        </div>
+
+        <div class="grid grid--4">
+          <a class="mood-card mood-light" href="product.html?mood=light">
+            <h3>ซดคล่อง</h3>
+            <span class="mood-bar" aria-hidden="true"></span>
+            <p class="mood-card__en">Clear &amp; Light</p>
+            <p class="mood-card__desc">สัมผัสความเรียบง่ายที่แสนสบายท้อง ด้วยน้ำซุปใสหอมกลมกล่อม ซดคล่องคอ ตอบโจทย์มื้อเบาๆ ที่ทานได้ทุกเวลา</p>
+            <span class="mood-card__cta">ดูสินค้ากลุ่มนี้</span>
+          </a>
+
+          <a class="mood-card mood-creamy" href="product.html?mood=creamy">
+            <h3>นัวละมุน</h3>
+            <span class="mood-bar" aria-hidden="true"></span>
+            <p class="mood-card__en">Creamy &amp; Rich</p>
+            <p class="mood-card__desc">เติมเต็มความอบอุ่นให้วันเหนื่อยล้าด้วยน้ำซุปเข้มข้น หอมมัน นุ่มนวลละมุนลิ้น ให้ความรู้สึกผ่อนคลายเหมือนได้พักผ่อนอยู่บ้าน</p>
+            <span class="mood-card__cta">ดูสินค้ากลุ่มนี้</span>
+          </a>
+
+          <a class="mood-card mood-spicy" href="product.html?mood=spicy">
+            <h3>จัดจ้าน</h3>
+            <span class="mood-bar" aria-hidden="true"></span>
+            <p class="mood-card__en">Spicy &amp; Bold</p>
+            <p class="mood-card__desc">ปลุกพลังความตื่นตัวให้ลุกโชนด้วยรสชาติเผ็ดร้อนถึงเครื่อง ถึงใจสายแซ่บที่มองหาความจัดจ้านแบบไม่มีกั๊ก</p>
+            <span class="mood-card__cta">ดูสินค้ากลุ่มนี้</span>
+          </a>
+
+          <a class="mood-card mood-exotic" href="product.html?mood=exotic">
+            <h3>ฟิวชัน</h3>
+            <span class="mood-bar" aria-hidden="true"></span>
+            <p class="mood-card__en">Umami Fusion</p>
+            <p class="mood-card__desc">เปิดประสบการณ์ความอร่อยแปลกใหม่ไม่จำเจ ผสานกลิ่นอายเครื่องเทศสูตรเฉพาะตัวที่กลมกล่อมและน่าค้นหาในทุกคำ</p>
+            <span class="mood-card__cta">ดูสินค้ากลุ่มนี้</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span>© 2026 บาหมี่</span>
+      <span>บะหมี่กึ่งสำเร็จรูปที่เข้าใจทุกอารมณ์ของคุณ</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
